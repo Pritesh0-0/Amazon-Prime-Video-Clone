@@ -1,0 +1,141 @@
+.homepage-background-image1 {
+    width: 100%;
+    margin: auto;
+    background-image: url("../homepageimages/first.jpg");
+    height: 600px;
+    color: white;
+    padding-top: 100px;
+
+}
+
+.background-image1 {
+    width: 40%;
+    margin-left: 3%;
+}
+
+.background-image1>h1,
+.background-image2>h1,
+.background-image3>h1 {
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.background-image1>.p,
+.background-image3>.p {
+    font-size: 26px;
+}
+
+
+
+.image1-btn,
+.image2-btn {
+    width: 50%;
+    background-color: rgba(18, 143, 245, 0.959);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: inherit;
+    cursor: pointer;
+
+}
+
+.homepage-background-image2 {
+    /* margin-top: -23px; */
+    width: 100%;
+    height: 500px;
+    background-image: url("../homepageimages/second.jpg");
+    color: white;
+
+}
+
+.background-image2 {
+
+    margin-left: 50%;
+    padding-top: 1px;
+}
+
+
+.background-image2>.p {
+    font-size: 26px;
+}
+
+.homepage-background-image3 {
+    width: 100%;
+    height: 400px;
+    background-image: url("../homepageimages/third.jpg");
+    color: white;
+
+
+}
+
+.background-image3 {
+    margin-left: 50px;
+    padding-top: 5px;
+}
+
+.image3-btn {
+    width: 25%;
+    background-color: rgba(18, 143, 245, 0.959);
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: inherit;
+    cursor: pointer;
+}
+
+.grid-part-left {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.grid-part-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    margin-top: 10px;
+
+}
+
+
+.grid-part-right>div>img {
+    width: 230px;
+}
+
+.left-part {
+    margin-top: 30px;
+    width: 45%;
+}
+
+.left-part>h1 {
+    font-size: 45px;
+}
+
+.left-part>p {
+    font-size: 35px;
+}
+
+
+.homepage-background-image4 {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-image: url("../homepageimages/fourth.jpg");
+    color: white;
+}
+
+.image4-right{
+    padding-top: 10px;
+    margin-left: 50%;
+    margin-right: 5%;
+
+}
+.image4-right > h1{
+    font-size: 40px;
+}
+.image4-right > p{
+    font-size: 26px;
+}
