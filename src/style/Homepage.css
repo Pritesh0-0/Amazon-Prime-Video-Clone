@@ -1,5 +1,6 @@
 body{
     font-family: Arialans-serif;
+    margin-top: 70px;
 }
 
 .homepage-background-image1 {
@@ -193,5 +194,6 @@ margin-left: 80px;
 .conditions > div > p { 
     color: white;
     margin-top: -0.5px;
+    /* background-color: #223647; */
    
 }
