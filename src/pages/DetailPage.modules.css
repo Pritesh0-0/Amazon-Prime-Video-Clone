@@ -1,0 +1,47 @@
+.main_back_image{
+    width: 100%;
+}
+.over{
+    position: absolute;
+    top:5rem; 
+    margin: 2rem;
+}
+h1{
+    color: white;
+}
+.flex{
+    display: flex;
+}
+.play_icon{
+    width: 40px;
+    height: 40px;
+}
+.continue_button{
+    background-color: rgb(0,168,225);
+    padding: 10px;
+    border-radius: 10px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.purchase_button{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    background-color: gray;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10px;
+    color: white;
+}
+.continue_button,.purchase_button:hover{
+  cursor: pointer;
+}
+.description{
+    width: 40rem;
+    color: white;
+    font-size: larger;
+}
