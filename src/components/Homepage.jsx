@@ -12,7 +12,7 @@ export default function Homepage() {
 
                     <div className="background-image1">
                         <h1>Welcome to Prime Video</h1>
-                        <p className="p">Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals Start your 30-day free trial</p>
+                        <p className="p">Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p>
                         <button className="image1-btn">Start your 30-days free trail</button>
                         <p style={{ marginLeft: "30px", fontSize: "20px" }}>with select credit or debit cards</p>
                         <button className="image1-btn">Annual Prime at ₹1499</button>
@@ -55,31 +55,31 @@ export default function Homepage() {
 
 
                         <div>
-                            <img src=" https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg"></img>
+                            <img src=" https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Erosnow-426X2948_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Docubay-426X2947_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src=" https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg"></img>
+                            <img src=" https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/ShortsTV-426X2944_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/Mubi-426X2946_V1.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg" alt=""></img>
                         </div>
                         <div>
-                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg"></img>
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/Hayu_logo_for_MLP_Grid.jpg" alt=""></img>
                         </div>
 
 
@@ -89,15 +89,47 @@ export default function Homepage() {
                 <div className="homepage-background-image4">
                     <div className="image4-right">
                         <h1>Even better with Fire TV Stick</h1>
-                        <p>The biggest movies and TV shows are always better on a big screen. Simply plug in your Amazon Fire TV Stick 
+                        <p>The biggest movies and TV shows are always better on a big screen. Simply plug in your Amazon Fire TV Stick
                             and stream on any HDTV. Press the voice button on the remote and say the
-                             name of the title you want to watch to find it in seconds.</p>
-                             <button className="image1-btn">Get Started</button>
+                            name of the title you want to watch to find it in seconds.</p>
+                        <button className="image1-btn">Get Started</button>
                     </div>
 
 
                 </div>
 
+
+                <div className="homepage-background-image5">
+                    <div className="background-image5">
+                        <h1>Family Friendly</h1>
+                        <p>With easy to use Parental Controls and a dedicated kids page,
+                            enjoy secure, ad-free kids entertainment. Kids can enjoy popular TV shows
+                            like Peppa Pig, Powerpuff Girls, and Chhota Bheem.</p>
+                        <button className="image1-btn">Get Started</button>
+
+                    </div>
+
+
+                </div>
+
+
+                <div className="amazon-footer">
+                    <div className="footer-logo">
+                        <img src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/web_footer_logo._CB462908456_.png" alt=""></img>
+                    </div>
+
+                    <div className="conditions">
+                        <div>
+
+                        <span>Terms and Privacy NoticeSend us feedback Help</span>
+                        </div>
+
+                        <div>
+                            <p>© 1996-2022, Amazon.com, Inc. or its affiliates</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </>
     )
