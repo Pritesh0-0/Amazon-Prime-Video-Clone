@@ -1,0 +1,33 @@
+.movies_data1 {
+    width: 90%; 
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px; 
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.movies_data1 > div {
+    background-color: aqua;
+
+}
+
+.movies_data1 :hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+
+}
+
+
+
+.images_img>img {
+    width: 100%;
+    height: 300px;
+}
+
+.curosal {
+    margin-top: -200px;
+}
