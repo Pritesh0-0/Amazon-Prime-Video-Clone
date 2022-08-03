@@ -1,6 +1,6 @@
 import React from 'react'
 import video from "../video/rocket.mp4"
-import "./DetailPage.modules.css"
+import "./VideoPage.modules.css"
 const VideoPage = () => {
   return (
     <div>

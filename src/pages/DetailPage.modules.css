@@ -44,4 +44,23 @@ h1{
     width: 40rem;
     color: white;
     font-size: larger;
+    margin-top: 2rem;
+}
+
+.page_link{
+text-decoration: none;
+color: white;
+}
+
+.circle{
+    width: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.feature_images{
+    width: 30px;
 }

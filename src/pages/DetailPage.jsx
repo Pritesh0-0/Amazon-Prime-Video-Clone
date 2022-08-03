@@ -1,11 +1,13 @@
 import React from 'react'
 import videobg from "../video/rocket.mp4"
+import download from "../img/download.png"
+import party from "../img/party.png"
 // import rocket from "../video/rocketimage.jpg"
 import "./DetailPage.modules.css"
 import play from "../img/play-64.png"
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const DetailPage = () => {
- var navigate = useNavigate();
+ //var navigate = useNavigate();
 
 
 //  const PlayVideo=()=>{
@@ -24,11 +26,23 @@ const DetailPage = () => {
 
             <div className='flex continue_button'>
               <img src={play} alt="" className='play_icon'/>
-              <Link to="./VideoPage.jsx"><p>Continue watching</p></Link> 
+              <Link to="/videoPage" className='page_link'><p>Continue watching</p></Link> 
             </div>
             
             <div className='purchase_button'>
                 More purchase options
+            </div>
+
+            <div className='circle'>
+              <img src={play} alt="" className='feature_images' />
+            </div>
+
+            <div className='circle'>
+              <img src={download} alt="" className='feature_images'/>
+            </div>
+
+            <div className='circle'>
+              <img src={party} alt="" className='feature_images'/>
             </div>
 
          </div>

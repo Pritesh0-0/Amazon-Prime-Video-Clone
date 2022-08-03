@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import DetailPage from './pages/DetailPage';
-// import VideoPage from './pages/VideoPage';
+import VideoPage from './pages/VideoPage';
+import { Route,Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <DetailPage/>
-      {/* <VideoPage/> */}
+    <Routes>
+         <Route path="/videoPage" element={<VideoPage/>}></Route>
+         <Route path="/" element={<DetailPage/>}></Route>
+  </Routes>
     </div>
   );
 }
