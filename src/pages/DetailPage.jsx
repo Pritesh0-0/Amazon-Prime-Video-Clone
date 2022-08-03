@@ -3,7 +3,15 @@ import videobg from "../video/rocket.mp4"
 // import rocket from "../video/rocketimage.jpg"
 import "./DetailPage.modules.css"
 import play from "../img/play-64.png"
+import { Link, useNavigate } from "react-router-dom";
 const DetailPage = () => {
+ var navigate = useNavigate();
+
+
+//  const PlayVideo=()=>{
+//   navigate("./VideoPage.jsx")
+//  }
+
   return (
     <div>
         <video src={videobg} autoPlay loop controls className='main_back_image'/> 
@@ -16,7 +24,7 @@ const DetailPage = () => {
 
             <div className='flex continue_button'>
               <img src={play} alt="" className='play_icon'/>
-              <p>Continue watching</p>
+              <Link to="./VideoPage.jsx"><p>Continue watching</p></Link> 
             </div>
             
             <div className='purchase_button'>
