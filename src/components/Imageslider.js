@@ -1,45 +1,47 @@
-import React, { useState } from 'react';
-import {SliderData} from "./Sliderimages"
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "../style/Homepage2.css"
-const ImageSlider = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+export default function Imageslider() {
+  const [slider, setslider] = useState([]);
+  const [page,setpage] = useState(1);
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+  const fetchData = () => {
+    axios({
+      method: "get",
+      url: `http://localhost:3000/Slider?_page=${page}&_limit=1`
+    })
+      .then(res => {
+        setslider(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
-
+  useEffect(()=>{
+    fetchData();
+  },[page])
+  // console.log(slider)
   return (
-    <section className='slider'>
-      <KeyboardArrowLeftIcon className='left-arrow' onClick={prevSlide} />
-      <KeyboardArrowRightIcon className='right-arrow' onClick={nextSlide} />
-      <div className='main_slider'>
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? 'slide active' : 'slide'}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt='travel image' className='image' />
-            )}
-          </div>
-        );
-      })}
-      </div>
-    </section>
-  );
-};
+    <div>
 
-export default ImageSlider;
+      <div className='slider_main'>
+        <button className='button1' disabled = {page==1} onClick={()=>setpage(page-1)}><KeyboardArrowLeftIcon /></button>
+        {
+          slider.map((data)=>(
+           
+            
+            <img src = {data.image}></img>
+          
+            
+            ))
+          }
+          <button className='button2' disabled = {page==6}onClick={()=>setpage(page + 1)} ><ChevronRightIcon /></button>
+
+
+      </div>
+
+    </div>
+  )
+}

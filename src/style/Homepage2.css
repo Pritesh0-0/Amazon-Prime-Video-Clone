@@ -1,33 +1,100 @@
-
-
 /* .main_div{
     display: flex;
     flex-direction: column;
-} */
+} 
 
-.actionmovies_main_div{
+*/
+body{
+    width: 100%;
+}
+
+.actionmovies_main_div {
     /* position: relative; */
     width: 100%;
     display: flex;
     gap: 10px;
-    margin: 2% 10% 0% 30%;
-    /* overflow-y: scroll; */
+    margin: 2% 10% 0% 0%;
+
 }
 
 .actionmovies_main_div .action_inside_item {
- width: 300px;
- height: 300px;
- box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 300px;
 }
 
-.action_inside_item > img {
+.action_inside_item:hover .hidden-part {
+    visibility: visible;
+    /* transition: opacity .2s; */
+    height: 300px;
+
+}
+
+.action_inside_item:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    /* height: 300px; */
+    height: 330px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+
+}
+
+.hidden-part {
+    display: flex;
+    visibility: hidden;
+    /* overflow: auto; */
+    flex-direction: column;
+    height: 0px;
+    /* padding: -12px; */
+}
+.hidden-part *{
+    padding: -3%;
+}
+
+.action_inside_item>img {
     width: 100%;
-    height: 60%
+    height: 200px
 }
 
 .typeof_movies{
-    margin: 0% 0% -1% -30%
+    /* display: flex; */
+    margin-left : -80%;
+    margin-bottom:  -1%;
+}
+.typeof_movies span{
+    color : blueviolet;
+}
+.typeof_movies p{
+    margin-top: -1.6%;
+    margin-left: 260px;
+    color: blue;
 }
 
+.slider_main{
+    display: flex;
+    width: 98%;
+    margin: auto;
+    margin-top: 70px;
+}
 
+.slider_main  img {
+    width: 96%;
+    height: 350px;
+}
 
+.slider_main .button1{
+    height: 50px;
+    margin-top: 100px;
+    /* margin-right: -40px; */
+    border: none;
+;
+    
+}
+.slider_main .button2{
+    height: 50px;
+    margin-top: 100px;
+    border: none;
+}
+.actionmovies_main_div button{
+    height: 30px;
+    margin-top: 100px;
+    border: none;
+}

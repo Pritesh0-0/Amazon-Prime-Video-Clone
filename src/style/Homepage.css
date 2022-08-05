@@ -30,13 +30,14 @@ body{
 .background-image1>.p,
 .background-image3>.p {
     font-size: 26px;
+    margin-left: -40px;
 }
 
 
 
 .image1-btn,
 .image2-btn {
-    width: 50%;
+    width: 60%;
     background-color: rgba(18, 143, 245, 0.959);
     padding: 15px;
     font-size: 20px;
@@ -77,7 +78,7 @@ body{
 }
 
 .background-image3 {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     padding-top: 5px;
 }
 
@@ -160,48 +161,12 @@ body{
     width: 40%;
     margin-left: 45px;
 }
-.amazon-footer{
-background-color : #0f171e;
-padding: 30px;
-    
-}
-
-.footer-logo{
-width: 20%;
-margin: auto;
-
-}
-
-.footer-logo > img{
-width: 130px;
-margin-left: 20px;
-}
-
-.conditions{
-    width: 60%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    padding-top: 10px;
-}
-.conditions > div > span{
-color: rgba(18, 143, 245, 0.959);
-cursor: pointer;
-margin-left: 80px;
-}
-
-.conditions > div > p { 
-    color: white;
-    margin-top: -0.5px;
-    /* background-color: #223647; */
-   
-}
 
 
 
-.App {
-    font-family: sans-serif;
+
+/* .App {
+    font-family: sans-serif;F
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,5 +176,5 @@ margin-left: 80px;
     transition: all 200ms ease-in-out;
     background-color: green;
     font-size: 7em;
-  }
+  } */
   
