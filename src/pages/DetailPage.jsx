@@ -2,17 +2,11 @@ import React from 'react'
 import videobg from "../video/rocket.mp4"
 import download from "../img/download.png"
 import party from "../img/party.png"
-// import rocket from "../video/rocketimage.jpg"
-import "./DetailPage.modules.css"
+ import "./DetailPage.modules.css"
 import play from "../img/play-64.png"
 import { Link } from "react-router-dom";
 const DetailPage = () => {
- //var navigate = useNavigate();
-
-
-//  const PlayVideo=()=>{
-//   navigate("./VideoPage.jsx")
-//  }
+ 
 
   return (
     <div>
@@ -49,6 +43,7 @@ const DetailPage = () => {
 
          <p className='description'>Rocketry – The Nambi Effect is a retelling of Nambi Narayananʼs life as it unravels in an interview by Superstar Suriya, on TV. Like many legends, Nambi is deeply flawed, his genius and obsession earning him enemies and detractors, making him a compelling modern protagonist. The film challenges the audience to take up the responsibility of recognizing & celebrating these special contributors.</p>
           
+          
         
          </div>
     </div>
@@ -56,3 +51,4 @@ const DetailPage = () => {
 }
 
 export default DetailPage
+
