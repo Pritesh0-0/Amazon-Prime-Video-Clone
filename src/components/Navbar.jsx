@@ -164,13 +164,20 @@ export default function Navbar() {
                         ))} */}
 
 
-                      <Link to="/HomePage2">
+                      <Link to="/HomePage2" style={{textDecoration:'none'}}>
                           <Button
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}>
                                 Home
                         </Button>
                       </Link>  
+                      <Link to="/store" style={{textDecoration:'none'}}>
+                          <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block'}}>
+                                Store
+                        </Button>
+                      </Link> 
 
 
 

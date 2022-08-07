@@ -9,6 +9,7 @@ import DetailPage from "./Pages/DetailPage"
 import VideoPage from "./Pages/VideoPage"
 import { Routes,Route} from "react-router-dom";
 import Paymentspage from './Pages/Paymentspage';
+import { Store } from './Pages/Store';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/PaymentPage" element={<Paymentspage/>}></Route>
       <Route path="/DetailsPage" element={<DetailPage/>}></Route>
       <Route path="/VideoPage" element={<VideoPage/>}></Route>
+      <Route path="/store" element={<Store/>}></Route>
         
      </Routes>
     </div>
