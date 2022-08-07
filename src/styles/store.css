@@ -1,0 +1,16 @@
+.store{
+        background-color: #0f171e;
+}
+.store-definer{
+        color:white;
+        font-size: 19px;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        display: flex;
+        overflow: auto;
+        flex-direction: row;
+        margin-left: 48px;
+        margin-bottom: 0px;
+        padding-top:10px;
+        padding-bottom:0;
+}
