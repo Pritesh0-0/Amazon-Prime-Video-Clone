@@ -9,8 +9,10 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Imageslider from "../components/Imageslider"
 import Footer from "../components/Footer"
+import { useNavigate} from "react-router-dom";
 
 export default function Homepage2() {
+    let navigate = useNavigate();
     const [actionmovies, setactionmovies] = useState([]);
     const [popularmovies, setpopularmovies] = useState([]);
     const [kidsmovies, setkidsmovies] = useState([]);
@@ -85,6 +87,11 @@ export default function Homepage2() {
 
     }
 
+
+    const HandleDetails=()=>{
+        navigate("/DetailsPage");
+    }
+
     return (
         <div>
 
@@ -104,7 +111,7 @@ export default function Homepage2() {
                 {
                     actionmovies.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path}></img>
+                            <img src={item.poster_path} onClick={()=>HandleDetails(item.id)}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
