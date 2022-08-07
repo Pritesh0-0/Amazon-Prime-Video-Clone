@@ -158,7 +158,7 @@ export default function Navbar() {
                             </Button>
                         ))}
                     </Box>
-
+                        <button>try for free</button>
                     <Search sx = {{width : "600px" ,marginRight : "100px",}}>
                         <SearchIconWrapper>
                             <SearchIcon />
