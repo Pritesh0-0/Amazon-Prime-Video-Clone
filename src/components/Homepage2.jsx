@@ -22,27 +22,27 @@ export default function Homepage2() {
     const [oldpage, setoldpage] = useState(1);
 
     const fetchData = () => {
-        fetch(`http://localhost:3000/Toprated?_page=${actionpage1}&_limit=4`)
+        fetch(`https://primevideo2021.herokuapp.com/Toprateds?_page=${actionpage1}&_limit=4`)
             .then((res) => res.json())
             .then((res) => setactionmovies(res))
             .catch((err) => console.log(err))
 
 
 
-        fetch(`http://localhost:3000/Popular?_page=${popularpage1}&_limit=4`)
+        fetch(`https://primevideo2021.herokuapp.com/Populars?_page=${popularpage1}&_limit=4`)
             .then((res) => res.json())
             .then((res) => setpopularmovies(res))
             .catch((err) => console.log(err))
 
 
-        fetch(`http://localhost:3000/Toprated?_page=${actionpage1}&_limit=4`)
+        fetch(`https://primevideo2021.herokuapp.com/Toprateds?_page=${actionpage1}&_limit=4`)
             .then((res) => res.json())
             .then((res) => setoldmovie(res))
             .catch((err) => console.log(err))
 
 
 
-        fetch(`http://localhost:3000/Popular?_page=${kidspage}&_limit=4`)
+        fetch(`https://primevideo2021.herokuapp.com/Populars?_page=${kidspage}&_limit=4`)
             .then((res) => res.json())
             .then((res) => setkidsmovies(res))
             .catch((err) => console.log(err))
@@ -60,7 +60,7 @@ export default function Homepage2() {
         // alert("add to watchlist")
         axios({
             method: "post",
-            url: "  http://localhost:3000/Watchlist",
+            url: "  https://primevideo2021.herokuapp.com/Watchlists",
             data: body
         })
 
@@ -73,7 +73,7 @@ export default function Homepage2() {
     const dontShow = (item)=>{
         axios({
             method : "delete",
-            url : `http://localhost:3000/Toprated?${item}`,
+            url : `https://primevideo2021.herokuapp.com/Toprateds?${item}`,
             // data : body
         })
         .then(res =>{

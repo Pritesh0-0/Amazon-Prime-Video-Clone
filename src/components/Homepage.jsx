@@ -3,7 +3,7 @@ import "../style/Homepage.css";
 import React from 'react';
 import Footer from "./Footer";
 
-
+import {Link} from "react-router-dom"
 export default function Homepage() {
     return (
         <>
@@ -14,7 +14,9 @@ export default function Homepage() {
                     <div className="background-image1">
                         <h1>Welcome to Prime Video</h1>
                         <p className="p">Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</p>
-                        <button className="image1-btn">Start your 30-days free trail</button>
+                       <Link to="/PaymentPage">
+                            <button className="image1-btn">Start your 30-days free trail</button>
+                       </Link> 
                         <p style={{ marginLeft: "30px", fontSize: "20px" }}>with select credit or debit cards</p>
                         <button className="image1-btn">Annual Prime at ₹1499</button>
                         <p style={{ marginLeft: "30px", fontSize: "20px" }}>With all electronic payment methods</p>

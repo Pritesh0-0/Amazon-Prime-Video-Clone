@@ -15,6 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import { Link } from 'react-router-dom';
 
 
 
@@ -121,11 +122,15 @@ export default function Navbar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
+                            {/* {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
+                            <MenuItem  onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">Home</Typography>
+                            </MenuItem> */}
+                            
                         </Menu>
                     </Box>
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -148,7 +153,7 @@ export default function Navbar() {
                         LOGO
                     </Typography>
                     <Box sx={{ flexGrow: 9, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                        {/* {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
@@ -156,9 +161,21 @@ export default function Navbar() {
                             >
                                 {page}
                             </Button>
-                        ))}
+                        ))} */}
+
+
+                      <Link to="/HomePage2">
+                          <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}>
+                                Home
+                        </Button>
+                      </Link>  
+
+
+
                     </Box>
-                        <button>try for free</button>
+                       <Link to="/Login"><button>try for free</button></Link> 
                     <Search sx = {{width : "600px" ,marginRight : "100px",}}>
                         <SearchIconWrapper>
                             <SearchIcon />

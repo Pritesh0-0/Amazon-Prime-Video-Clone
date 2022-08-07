@@ -10,7 +10,7 @@ export default function Imageslider() {
   const fetchData = () => {
     axios({
       method: "get",
-      url: `http://localhost:3000/Slider?_page=${page}&_limit=1`
+      url: `https://primevideo2021.herokuapp.com/Sliders?_page=${page}&_limit=1`
     })
       .then(res => {
         setslider(res.data)

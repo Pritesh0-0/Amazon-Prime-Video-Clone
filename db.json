@@ -1,5 +1,5 @@
 {
-  "Toprated": [
+  "Toprateds": [
     {
       "adult": false,
       "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
@@ -151,7 +151,7 @@
       "vote_count": 239
     }
   ],
-  "Popular": [
+  "Populars": [
     {
       "adult": false,
       "backdrop_path": "/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
@@ -303,7 +303,7 @@
       "vote_count": 19896
     }
   ],
-  "Watchlist": [
+  "Watchlists": [
     {
       "adult": false,
       "backdrop_path": "/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg",
@@ -335,7 +335,7 @@
       "vote_count": 14202
     }
   ],
-  "Slider": [
+  "Sliders": [
     {
       "image": "https://m.media-amazon.com/images/S/sonata-images-prod/PV_IN_CROW_UN_Anni_DP/e9cb5fb8-c1c3-4b26-a6fe-9789e39e2870._UR3000,600_SX1500_FMwebp_.jpeg"
     },
