@@ -1,0 +1,52 @@
+* {
+    font-family: sans-serif;
+  }
+  .image {
+    margin-left: 45%;
+    height: 100px;
+    width: 180px;
+  }
+  #basic {
+    width: 260px;
+    height: 5px;
+  }
+  #head {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  span {
+    font-weight: bold;
+  }
+  label {
+    margin-left: 2%;
+  }
+  #btn {
+    width: 290px;
+    height: 30px;
+    color: black;
+    background-color: orange;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  #condition {
+    font-weight: lighter;
+    font-size: 12px;
+  }
+  #condition a {
+    text-decoration: none;
+    color: blue;
+  }
+  #new {
+    margin-left: 22%;
+    font-weight: light;
+    font-size: 14px;
+  }
+  #btnTwo {
+    width: 290px;
+    height: 30px;
+    color: black;
+    font-size: 10px;
+    font-weight: lighter;
+    background-color: lightgray;
+  }
+  

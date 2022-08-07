@@ -1,0 +1,37 @@
+.amazon-footer{
+    background-color : #0f171e;
+    padding: 30px;
+        
+    }
+    
+    .footer-logo{
+    width: 20%;
+    margin: auto;
+    
+    }
+    
+    .footer-logo > img{
+    width: 130px;
+    margin-left: 20px;
+    }
+    
+    .conditions{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .conditions > div > span{
+    color: rgba(18, 143, 245, 0.959);
+    cursor: pointer;
+    margin-left: 80px;
+    }
+    
+    .conditions > div > p { 
+        color: white;
+        margin-top: -0.5px;
+        /* background-color: #223647; */
+       
+    }
