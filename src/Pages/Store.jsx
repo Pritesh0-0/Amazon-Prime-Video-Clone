@@ -44,7 +44,7 @@ export const Store = () => {
           </p>
         </div>
         <div style={{ marginLeft: "48px" }}>
-          <Corsecstore type="Toprateds"/>
+          <Corsecstore type="Populars"/>
         </div>
         <div className="store-definer">
           <p>RENT Science fiction movies</p>
@@ -82,7 +82,7 @@ export const Store = () => {
           </p>
         </div>
         <div style={{ marginLeft: "48px" }}>
-          <Corsecstore type="Toprateds"/>
+          <Corsecstore type="Populars"/>
         </div>
         <div className="store-definer">
           <p>RENT Kids and family movies</p>
