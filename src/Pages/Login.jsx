@@ -39,7 +39,7 @@ function Login() {
   const { logdata } = useSelector((state) => state.login);
 
   if(logdata.length>0){
-    return <Navigate to="/HomePage2" /> 
+    return <Navigate to="/" /> 
   }
   return (
     <div classname="login">
