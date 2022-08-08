@@ -9,7 +9,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Imageslider from "../components/Imageslider"
 import Footer from "../components/Footer"
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Homepage2() {
     let navigate = useNavigate();
@@ -72,23 +72,23 @@ export default function Homepage2() {
 
     }
 
-    const dontShow = (item)=>{
+    const dontShow = (item) => {
         axios({
-            method : "delete",
-            url : `https://primevideo2021.herokuapp.com/Toprateds?${item}`,
+            method: "delete",
+            url: `https://primevideo2021.herokuapp.com/Toprateds?${item}`,
             // data : body
         })
-        .then(res =>{
-            console.log(res.data)
-        })
-        .catch(err =>{
-            console.log(err);
-        })
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log(err);
+            })
 
     }
 
 
-    const HandleDetails=()=>{
+    const HandleDetails = () => {
         navigate("/DetailsPage");
     }
 
@@ -111,7 +111,7 @@ export default function Homepage2() {
                 {
                     actionmovies.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path} onClick={()=>HandleDetails(item.id)}></img>
+                            <img src={item.poster_path} onClick={() => HandleDetails(item.id)}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
@@ -120,7 +120,7 @@ export default function Homepage2() {
                                     <p>{item.release_date}</p></div>
                                 <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <PlayArrowIcon />
-                                    <NotInterestedIcon onClick = {()=>dontShow(item)} ></NotInterestedIcon>
+                                    <NotInterestedIcon onClick={() => dontShow(item)} ></NotInterestedIcon>
                                     <AddIcon onClick={() => addToWatchList(item)}></AddIcon>
                                 </div>
                             </div>
@@ -139,10 +139,11 @@ export default function Homepage2() {
 
 
             <div className='actionmovies_main_div'>
-                <div className='leftarrow1'>
-                    <button disabled={popularpage1 == 1} onClick={() => setpag2(popularpage1 - 1)}><KeyboardArrowLeftIcon /></button>
 
-                </div>
+                            <div className='leftarrow1'>
+                                <button disabled={popularpage1 == 1} onClick={() => setpag2(popularpage1 - 1)}><KeyboardArrowLeftIcon /></button>
+
+                            </div>
                 {
                     popularmovies.map((item) => (
                         <div className='action_inside_item' >
@@ -233,10 +234,10 @@ export default function Homepage2() {
                     ))
                 }
 
-                <button disabled={popularpage1 == 3} onClick={() => setkidpage(kidspage + 1)}><ChevronRightIcon /></button>
+                <button disabled={popularpage1 == 2} onClick={() => setkidpage(kidspage + 1)}><ChevronRightIcon /></button>
             </div>
 
-            <Footer />
+
         </div>
     )
 }

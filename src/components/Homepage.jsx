@@ -116,7 +116,7 @@ export default function Homepage() {
                 </div>
 
 
-              <Footer />
+              
             </div>
         </>
     )
