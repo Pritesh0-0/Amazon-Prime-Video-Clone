@@ -37,7 +37,7 @@ export default function Homepage2() {
             .catch((err) => console.log(err))
 
 
-        fetch(`https://primevideo2021.herokuapp.com/Toprateds?_page=${actionpage1}&_limit=4`)
+        fetch(`https://primevideo2021.herokuapp.com/Toprateds?_page=${oldpage}&_limit=4`)
             .then((res) => res.json())
             .then((res) => setoldmovie(res))
             .catch((err) => console.log(err))
@@ -54,7 +54,7 @@ export default function Homepage2() {
 
     useEffect(() => {
         fetchData()
-    }, [actionpage1, popularpage1, kidspage])
+    }, [actionpage1, popularpage1, kidspage,oldpage])
 
 
 
@@ -99,7 +99,10 @@ export default function Homepage2() {
 
             {/*  Action Movies*/}
             <div className='typeof_movies'>
-                <h3> <span>Store</span> Action movies</h3><p>see more</p>
+                <span style={{color : "blue"}}>Store</span>
+                <h3>Action Movies</h3>
+                <p style={{color : "blue"}}>see more</p>
+           
 
             </div>
 
@@ -116,13 +119,14 @@ export default function Homepage2() {
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
                                 <div style={{ display: "flex", marginTop: "-20px", justifyContent: "space-around" }}>
-                                    <p>{item.original_title}</p>
-                                    <p>{item.release_date}</p></div>
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                    {/* <p>{item.original_title}</p>
+                                    <p>{item.release_date}</p> */}
+                                    </div>
+                                {/* <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <PlayArrowIcon />
                                     <NotInterestedIcon onClick={() => dontShow(item)} ></NotInterestedIcon>
                                     <AddIcon onClick={() => addToWatchList(item)}></AddIcon>
-                                </div>
+                                </div> */}
                             </div>
 
                         </div>
@@ -133,7 +137,10 @@ export default function Homepage2() {
 
             {/* FOR THE POPULAR MOVIES */}
             <div className='typeof_movies'>
-                <h3><span>Store</span>Popular movies</h3><p>see more</p>
+                <span style={{color : "blue"}}>Store</span>
+                <h3>Popular Movies</h3>
+                <p style={{color : "blue"}}>see more</p>
+           
 
             </div>
 
@@ -152,13 +159,14 @@ export default function Homepage2() {
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
                                 <div style={{ display: "flex", marginTop: "-20px", justifyContent: "space-around" }}>
-                                    <p>{item.original_title}</p>
-                                    <p>{item.release_date}</p></div>
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                    {/* <p>{item.original_title}</p> */}
+                                    {/* <p>{item.release_date}</p> */}
+                                    </div>
+                                {/* <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <PlayArrowIcon />
                                     <NotInterestedIcon />
                                     <AddIcon onClick={() => addToWatchList(item)}></AddIcon>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))
@@ -170,8 +178,12 @@ export default function Homepage2() {
             {/* For the old Movies */}
 
 
-            <div className="typeof_movies">
-                <h3> <span>Store</span> Old movies</h3><p>see more</p>
+            <div className='typeof_movies'>
+                <span style={{color : "blue"}}>Store</span>
+                <h3>Old Movies</h3>
+                <p style={{color : "blue"}}>see more</p>
+           
+
             </div>
 
 
@@ -188,13 +200,14 @@ export default function Homepage2() {
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
                                 <div style={{ display: "flex", marginTop: "-20px", justifyContent: "space-around" }}>
-                                    <p>{item.original_title}</p>
-                                    <p>{item.release_date}</p></div>
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                    {/* <p>{item.original_title}</p> */}
+                                    {/* <p>{item.release_date}</p> */}
+                                    </div>
+                                {/* <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <PlayArrowIcon />
                                     <NotInterestedIcon />
                                     <AddIcon onClick={() => addToWatchList(item)}></AddIcon>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))
@@ -206,7 +219,11 @@ export default function Homepage2() {
 
             {/* Kids movies */}
             <div className='typeof_movies'>
-                <h3> <span>Store</span> Kids movies</h3><p>see more</p>
+                <span style={{color : "blue"}}>Store</span>
+                <h3>Kids Movies</h3>
+                <p style={{color : "blue"}}>see more</p>
+           
+
             </div>
 
             <div className='actionmovies_main_div'>
@@ -222,13 +239,14 @@ export default function Homepage2() {
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
                                 <div style={{ display: "flex", marginTop: "-20px", justifyContent: "space-around" }}>
-                                    <p>{item.original_title}</p>
-                                    <p>{item.release_date}</p></div>
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                    {/* <p>{item.original_title}</p> */}
+                                    {/* <p>{item.release_date}</p> */}
+                                    </div>
+                                {/* <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <PlayArrowIcon />
                                     <NotInterestedIcon />
                                     <AddIcon onClick={() => addToWatchList(item)}></AddIcon>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))

@@ -14,6 +14,7 @@ body{
     display: flex;
     gap: 10px;
     margin: 2% 10% 0% 0%;
+    margin-bottom: 20px;
 
 }
 
@@ -24,12 +25,12 @@ body{
 .action_inside_item:hover .hidden-part {
     visibility: visible;
     /* transition: opacity .2s; */
-    height: 400px;
+    height: 300px;
 
 }
 
 .action_inside_item:hover {
-    height: 400px;
+    height: 350px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 
@@ -49,21 +50,25 @@ body{
 
 .action_inside_item>img {
     width: 100%;
+    cursor: pointer;
     height: 250px
 }
 
 .typeof_movies{
     /* display: flex; */
-    margin-left : -80%;
-    margin-bottom:  -1%;
+    /* margin-left : -80%;
+    margin-bottom:  -1%; */
+    display: flex;
+    margin-left: 40px;
 }
-.typeof_movies span{
-    color : blueviolet;
+.typeof_movies span,p{
+    font-size: 20px;
+    /* color: blue; */
+    margin-top: 5px;
+
 }
-.typeof_movies p{
-    margin-top: -1.2%;
-    margin-left: 300px;
-    color: blue;
+.typeof_movies *{
+    margin-left: 5px;
 }
 
 .slider_main{
@@ -75,7 +80,8 @@ body{
 
 .slider_main  img {
     width: 96%;
-    height: 350px;
+    height: 320px;
+    cursor: pointer;
 }
 
 .slider_main .button1{
