@@ -10,36 +10,49 @@
 #basic {
   width: 260px;
   height: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
 }
 #head {
   font-weight: 700;
   font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 span {
   font-weight: bold;
   font-size: 13px;
+  margin-top: 5px;
 }
 label {
   margin-left: 2%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #btn {
-  width: 290px;
+  width: 260px;
   height: 30px;
   color: black;
   background-color: orange;
   font-size: 13px;
   font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #condition {
   font-weight: lighter;
   font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #condition a {
   text-decoration: none;
   color: blue;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #news {
-  margin-left: 35%;
   font-weight: light;
   font-size: 12px;
 }
@@ -50,15 +63,24 @@ label {
   font-size: 10px;
   font-weight: lighter;
   background-color: lightgray;
+  margin-left: auto;
+  margin-right: auto;
 }
 #keep {
   font-weight: lighter;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.logoss{
+#logoss{
   margin-top: 50px;
-  margin-right: 500px;
+  margin-bottom: 0;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .login_page{
   text-decoration: none;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
