@@ -66,7 +66,7 @@ export default function Paymentspage() {
                     </div>
                 </div>
 
-                <button id="PayButton" className="btn btn-block btn-success submit-button" type="submit" >
+                <button onClick={()=>alert("payment successfull")} id="PayButton" className="btn btn-block btn-success submit-button" type="submit" >
                     <span className="submit-button-lock"></span>
                     <Link to="/HomePage2"><span className="align-middle">Pay $10.00</span></Link> 
                 </button>
