@@ -1,7 +1,7 @@
 import React from 'react'
 // import pic from './image/alogo.png'
 import './Paymentspage.modules.css'
-
+import {Link} from "react-router-dom"
 
 export default function Paymentspage() {
     return (
@@ -68,7 +68,7 @@ export default function Paymentspage() {
 
                 <button id="PayButton" className="btn btn-block btn-success submit-button" type="submit" >
                     <span className="submit-button-lock"></span>
-                    <span className="align-middle">Pay $10.00</span>
+                    <Link to="/HomePage2"><span className="align-middle">Pay $10.00</span></Link> 
                 </button>
 
             </form>

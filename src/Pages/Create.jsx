@@ -4,20 +4,49 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import "./Create.modules.css";
+import { useRef } from "react";
 
-function Login() {
+function Create() {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const passwordRef1 = useRef(null);
+  const passwordRef2 = useRef(null);
+  // const navigate= useNavigate()
+  const submitData = (e) => {
+    e.preventDefault();
+    if (
+      nameRef.current.value === "" ||
+      emailRef.current.value === "" ||
+      passwordRef1.current.value === "" ||
+      passwordRef2.current.value === ""
+    ) {
+      alert("Please enter data to all feilds!!");
+    } else if (passwordRef1.current.value !== passwordRef2.current.value) {
+      alert("Password is not matching");
+    }
+
+    const details = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef2.current.value
+    };
+    localStorage.setItem("user-details", JSON.stringify(details));
+    // if (details.name != "" && details.email != "" && details.password != "") {
+    //   navigate({ pathname: "/login" })
+    // }
+  };
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
-    <div classname="create">
-      <img
-        className="image"
+    <div>
+      <img className="logoss"
+        id="image"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZUaYFUa_lu0hSWHouZfgID6xxHCcyDFZrWONAE-P9eFIEi1gOnv4Bmc9PROxgAO148g&usqp=CAU"
       />
       <Box
         sx={{
           marginTop: "0%",
           width: 300,
-          height: 550,
+          height: 530,
           backgroundColor: "white",
           border: "1px solid lightgray",
           marginLeft: "39%",
@@ -27,25 +56,27 @@ function Login() {
         <span id="head">Create Account</span>
         <br />
         <br />
-        <span>Your name</span>
-        <TextField id="basic" variant="outlined" /> <br />
-        <br />
-        <span>Email</span>
-        <br />
-        <TextField id="basic" variant="outlined" />
-        <br />
-        <br />
-        <span>Password</span>
-        <TextField id="basic" variant="outlined" /> <br />
-        <br />
-        <span>Re-enter password</span>
-        <TextField id="basic" variant="outlined" /> <br />
-        <br />
-        <Button id="btn" variant="contained">
-          Create your Amazon account
-        </Button>
-        <br />
-        <br />
+        <form>
+          <span>Your name</span>
+          <TextField id="basic" variant="outlined" ref={nameRef} /> <br />
+          <br />
+          <span>Email</span>
+          <br />
+          <TextField id="basic" variant="outlined" ref={emailRef} />
+          <br />
+          <br />
+          <span>Password</span>
+          <TextField id="basic" variant="outlined" ref={passwordRef1} /> <br />
+          <br />
+          <span>Re-enter password</span>
+          <TextField id="basic" variant="outlined" ref={passwordRef2} /> <br />
+          <br />
+          <Button onClick={submitData} id="btn" variant="contained">
+            Create your Amazon account
+          </Button>
+          <br />
+          <br />
+        </form>
         <span id="condition">
           By continuing, you agree to the Amazon{" "}
           <a href="" target="_blank">
@@ -67,4 +98,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Create;
