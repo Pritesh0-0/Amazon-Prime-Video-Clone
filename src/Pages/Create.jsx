@@ -1,40 +1,47 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Checkbox from "@mui/material/Checkbox";
+
 import "./Create.modules.css";
-import { useRef } from "react";
+
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { signupToDoError, signupToDoLoading, signupToDoSuccess } from '../Store/actions';
+import { Navigate} from 'react-router-dom';
 
 function Create() {
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const passwordRef1 = useRef(null);
-  const passwordRef2 = useRef(null);
-  // const navigate= useNavigate()
-  const submitData = (e) => {
-    e.preventDefault();
-    if (
-      nameRef.current.value === "" ||
-      emailRef.current.value === "" ||
-      passwordRef1.current.value === "" ||
-      passwordRef2.current.value === ""
-    ) {
-      alert("Please enter data to all feilds!!");
-    } else if (passwordRef1.current.value !== passwordRef2.current.value) {
-      alert("Password is not matching");
-    }
-
-    const details = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      password: passwordRef2.current.value
-    };
-    localStorage.setItem("user-details", JSON.stringify(details));
-    // if (details.name != "" && details.email != "" && details.password != "") {
-    //   navigate({ pathname: "/login" })
-    // }
-  };
+// const label = { inputProps: { "aria-label": "Checkbox demo" } };
+const [email,setEmail]=React.useState('');
+const [password, setPassword]=useState('');
+const [name, setName]=useState('');
+const [passwordcon, setPasswordcon]=useState('');
+const dispatch=useDispatch();
+let handleSignUp=()=>{
+if(password===passwordcon){
+        dispatch(signupToDoLoading());
+axios({
+      method: "post",
+      url: "https://reqres.in/api/register",
+      data: {
+        email:email,
+        password:password
+      },
+}).then((res) => {
+        dispatch(signupToDoSuccess(res.data));
+      })
+      .catch((err) => {
+        dispatch(signupToDoError());
+      });
+  }
+  else{
+    alert("Passwords are not matching.")
+  }
+}
+const { logdata } = useSelector((state) => state.login); 
+  if(logdata.length>0){
+    return <Navigate to="/" /> 
+  }
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <div>
@@ -58,20 +65,22 @@ function Create() {
         <br />
         <form>
           <span>Your name</span>
-          <TextField id="basic" variant="outlined" ref={nameRef} /> <br />
+          <TextField id="basic" variant="outlined" value={name} onChange={(e) => setName(e.target.value)}/> <br />
           <br />
           <span>Email</span>
           <br />
-          <TextField id="basic" variant="outlined" ref={emailRef} />
+          <TextField id="basic" variant="outlined" value={email}
+          onChange={(e) => setEmail(e.target.value)}/>
           <br />
           <br />
           <span>Password</span>
-          <TextField id="basic" variant="outlined" ref={passwordRef1} /> <br />
+          <TextField id="basic" variant="outlined"  value={password}
+          onChange={(e) => setPassword(e.target.value)}/> <br />
           <br />
           <span>Re-enter password</span>
-          <TextField id="basic" variant="outlined" ref={passwordRef2} /> <br />
+          <TextField id="basic" variant="outlined" value={passwordcon} onChange={(e) => setPasswordcon(e.target.value)}/> <br />
           <br />
-          <Button onClick={submitData} id="btn" variant="contained">
+          <Button onClick={handleSignUp} id="btn" variant="contained">
             Create your Amazon account
           </Button>
           <br />
@@ -90,7 +99,7 @@ function Create() {
         <span id="new">Already have an account?</span>
         <br />
         <br />
-        <Button id="btnTwo" variant="contained">
+        <Button id="btnTwo" variant="contained" >
           Sign-In
         </Button>
       </Box>

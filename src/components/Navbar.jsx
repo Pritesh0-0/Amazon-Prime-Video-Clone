@@ -16,6 +16,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { Link } from 'react-router-dom';
+import { logOut } from "../Store/actions";
+import { useDispatch, useSelector } from "react-redux";
+
 import "../style/Navbar.css"
 
 
@@ -25,6 +28,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 export default function Navbar() {
+   
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -67,7 +71,9 @@ export default function Navbar() {
             },
         },
     }));
-
+    const { token } = useSelector((state) => state.login);
+    const dispatch=useDispatch();
+    const [state, setState] = React.useState(false);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -83,6 +89,7 @@ export default function Navbar() {
     };
 
     const handleCloseUserMenu = () => {
+        dispatch(logOut());
         setAnchorElUser(null);
     };
 
