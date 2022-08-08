@@ -16,7 +16,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { Link } from 'react-router-dom';
-
+import "../style/Navbar.css"
 
 
 
@@ -87,11 +87,14 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: "#223647",height : "70px" }}
-        >
+        <AppBar position="fixed" sx={{ backgroundColor: "#223647",height : "70px" }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <img sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/web_footer_logo._CB462908456_.png" alt=""></img>
+                   <Link to="/">
+                   <img sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/web_footer_logo._CB462908456_.png" alt=""></img>
+                   </Link>
+                   
+                
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -163,7 +166,7 @@ export default function Navbar() {
 
 
                     </Box>
-                       <Link to="/Login"><button>try for free</button></Link> 
+                       <Link to="/Login"><button className='tryforfree'>Try For Free</button></Link> 
                     <Search sx = {{width : "600px" ,marginRight : "100px",}}>
                         <SearchIconWrapper>
                             <SearchIcon />

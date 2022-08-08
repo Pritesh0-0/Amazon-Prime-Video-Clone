@@ -10,6 +10,7 @@ import VideoPage from "./Pages/VideoPage"
 import { Routes,Route} from "react-router-dom";
 import Paymentspage from './Pages/Paymentspage';
 import { Store } from './Pages/Store';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/store" element={<Store/>}></Route>
         
      </Routes>
+     <Footer />
     </div>
   );
 }
