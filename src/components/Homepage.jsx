@@ -48,7 +48,7 @@ export default function Homepage() {
                 <div className="grid-part-left">
 
                     <div className="left-part">
-                        <h1>Your favorite channels all in one place</h1>
+                        <h1 style={{color : "black"}}>Your favorite channels all in one place</h1>
                         <p className=".p">With Prime Video Channels, find shows and movies from your favorite channels all in one place. Enjoy with an add-on subscription to Channels of your choice
                         </p>
                     </div>

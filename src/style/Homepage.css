@@ -1,6 +1,7 @@
 body{
     font-family: Arialans-serif;
     /* margin-top: 1200px; */
+    margin-top: 70px;
 }
 
 .homepage-background-image1 {
@@ -48,7 +49,7 @@ body{
 }
 
 .homepage-background-image2 {
-    /* margin-top: -23px; */
+    /* margin-top: 2px; */
     width: 100%;
     height: 500px;
     background-image: url("../homepageimages/second.jpg");
@@ -69,6 +70,7 @@ body{
 }
 
 .homepage-background-image3 {
+    /* margin-top: 1px; */
     width: 100%;
     height: 400px;
     background-image: url("../homepageimages/third.jpg");
@@ -106,6 +108,7 @@ body{
     grid-template-rows: auto;
     grid-gap: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -134,6 +137,7 @@ body{
     height: 500px;
     background-image: url("../homepageimages/fourth.jpg");
     color: white;
+    margin-bottom: 1x;
 }
 
 .image4-right{
@@ -152,10 +156,12 @@ body{
 .homepage-background-image5{
     width: 100%;
     margin: auto;
-    height: 400px;
+    height: 550px;
     background-image: url("../homepageimages/fifth.jpg");
     color: white;
     padding-top: 5px;
+    padding-bottom: 5px;
+    /* margin-bottom: 20px; */
 }
 .background-image5{
     width: 40%;
@@ -167,6 +173,9 @@ body{
     height: 15px;
 }
 
+.homepage-background-image5 h1{
+    padding-top: 100px;
+}
 
 /* .App {
     font-family: sans-serif;F
