@@ -42,10 +42,11 @@ const { logdata } = useSelector((state) => state.login);
   if(logdata.length>0){
     return <Navigate to="/" /> 
   }
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+//   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <div>
       <img className="logoss"
+          alt = "fdf"
         id="image"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZUaYFUa_lu0hSWHouZfgID6xxHCcyDFZrWONAE-P9eFIEi1gOnv4Bmc9PROxgAO148g&usqp=CAU"
       />
@@ -87,11 +88,11 @@ const { logdata } = useSelector((state) => state.login);
           <br />
         </form>
         <span id="condition">
-          By continuing, you agree to the Amazon{" "}
-          <a href="" target="_blank">
+          By continuing, you agree to the Amazon
+          
             Conditions
             <br /> of Use and Privacy Notice.
-          </a>
+         
         </span>
         <br />
         <br />
