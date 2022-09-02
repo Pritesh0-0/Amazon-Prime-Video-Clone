@@ -20,6 +20,7 @@ amazon prime is video streaming plaform where you can see movies,webseris on sub
 
 # Clone Website Address
 - [Database GitHub](https://github.com/alicehack2020/primevideo)
+- https://6311e3c12cca017d53b4d2f0--amazon-prme-video-clone.netlify.app/
 
 # Team Members
 
