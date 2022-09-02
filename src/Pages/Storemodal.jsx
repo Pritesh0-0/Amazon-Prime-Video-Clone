@@ -66,6 +66,7 @@ export default function Storemodal(props) {
         {/* <ReactPlayer key={YouTubePlayer} url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
 
         <img
+          alt="ffff"
           src={props.poster}
           style={{
             height: "320px",
