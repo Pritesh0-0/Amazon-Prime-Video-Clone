@@ -17,13 +17,13 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { Link, useNavigate } from 'react-router-dom';
 import { logOut } from "../Store/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "../style/Navbar.css"
 
 
 
-const pages = ['Home', 'Store', 'Channels'];
+// const pages = ['Home', 'Store', 'Channels'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -71,9 +71,9 @@ export default function Navbar() {
             },
         },
     }));
-    const { token } = useSelector((state) => state.login);
+    // const { token } = useSelector((state) => state.login);
     const dispatch=useDispatch();
-    const [state, setState] = React.useState(false);
+    // const [state, setState] = React.useState(false);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
