@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import "../style/Homepage2.css"
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import AddIcon from '@mui/icons-material/Add';
-import NotInterestedIcon from '@mui/icons-material/NotInterested';
-import axios from "axios";
+// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+// import AddIcon from '@mui/icons-material/Add';
+// import NotInterestedIcon from '@mui/icons-material/NotInterested';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Imageslider from "../components/Imageslider"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 import { useNavigate } from "react-router-dom";
 
 export default function Homepage2() {
@@ -54,38 +53,38 @@ export default function Homepage2() {
 
     useEffect(() => {
         fetchData()
-    }, [actionpage1, popularpage1, kidspage,oldpage])
+    })
 
 
 
-    const addToWatchList = (body) => {
-        // alert("add to watchlist")
-        axios({
-            method: "post",
-            url: "  https://primevideo2021.herokuapp.com/Watchlists",
-            data: body
-        })
+    // const addToWatchList = (body) => {
+    //     // alert("add to watchlist")
+    //     axios({
+    //         method: "post",
+    //         url: "  https://primevideo2021.herokuapp.com/Watchlists",
+    //         data: body
+    //     })
 
-            .then(res => {
-                console.log(res)
-            })
+    //         .then(res => {
+    //             console.log(res)
+    //         })
 
-    }
+    // }
 
-    const dontShow = (item) => {
-        axios({
-            method: "delete",
-            url: `https://primevideo2021.herokuapp.com/Toprateds?${item}`,
-            // data : body
-        })
-            .then(res => {
-                console.log(res.data)
-            })
-            .catch(err => {
-                console.log(err);
-            })
+    // const dontShow = (item) => {
+    //     axios({
+    //         method: "delete",
+    //         url: `https://primevideo2021.herokuapp.com/Toprateds?${item}`,
+    //         // data : body
+    //     })
+    //         .then(res => {
+    //             console.log(res.data)
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //         })
 
-    }
+    // }
 
 
     const HandleDetails = () => {
@@ -108,13 +107,13 @@ export default function Homepage2() {
 
             <div className='actionmovies_main_div'>
                 <div className='leftarrow1'>
-                    <button disabled={actionpage1 == 1} onClick={() => setpage1(actionpage1 - 1)}><KeyboardArrowLeftIcon /></button>
+                    <button disabled={actionpage1 === 1} onClick={() => setpage1(actionpage1 - 1)}><KeyboardArrowLeftIcon /></button>
 
                 </div>
                 {
                     actionmovies.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path} onClick={() => HandleDetails(item.id)}></img>
+                            <img alt='fkf' src={item.poster_path} onClick={() => HandleDetails(item.id)}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
@@ -132,7 +131,7 @@ export default function Homepage2() {
                         </div>
                     ))
                 }
-                <button disabled={actionpage1 == 3} onClick={() => setpage1(actionpage1 + 1)}><ChevronRightIcon /></button>
+                <button disabled={actionpage1 === 3} onClick={() => setpage1(actionpage1 + 1)}><ChevronRightIcon /></button>
             </div>
 
             {/* FOR THE POPULAR MOVIES */}
@@ -148,13 +147,13 @@ export default function Homepage2() {
             <div className='actionmovies_main_div'>
 
                             <div className='leftarrow1'>
-                                <button disabled={popularpage1 == 1} onClick={() => setpag2(popularpage1 - 1)}><KeyboardArrowLeftIcon /></button>
+                                <button disabled={popularpage1 === 1} onClick={() => setpag2(popularpage1 - 1)}><KeyboardArrowLeftIcon /></button>
 
                             </div>
                 {
                     popularmovies.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path}></img>
+                            <img alt='ddd' src={item.poster_path}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
@@ -172,7 +171,7 @@ export default function Homepage2() {
                     ))
                 }
 
-                <button disabled={popularpage1 == 3} onClick={() => setpag2(popularpage1 + 1)}><ChevronRightIcon /></button>
+                <button disabled={popularpage1 === 3} onClick={() => setpag2(popularpage1 + 1)}><ChevronRightIcon /></button>
             </div>
 
             {/* For the old Movies */}
@@ -189,13 +188,13 @@ export default function Homepage2() {
 
             <div className='actionmovies_main_div'>
                 <div className='leftarrow1'>
-                    <button disabled={oldpage == 1} onClick={() => setoldpage(oldpage - 1)}><KeyboardArrowLeftIcon /></button>
+                    <button disabled={oldpage === 1} onClick={() => setoldpage(oldpage - 1)}><KeyboardArrowLeftIcon /></button>
 
                 </div>
                 {
                     oldmovie.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path}></img>
+                            <img alt='kkk' src={item.poster_path}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
@@ -213,7 +212,7 @@ export default function Homepage2() {
                     ))
                 }
 
-                <button disabled={oldpage == 3} onClick={() => setoldpage(oldpage + 1)}><ChevronRightIcon /></button>
+                <button disabled={oldpage === 3} onClick={() => setoldpage(oldpage + 1)}><ChevronRightIcon /></button>
             </div>
 
 
@@ -228,13 +227,13 @@ export default function Homepage2() {
 
             <div className='actionmovies_main_div'>
                 <div className='leftarrow1'>
-                    <button disabled={kidspage == 1} onClick={() => setkidpage(kidspage - 1)}><KeyboardArrowLeftIcon /></button>
+                    <button disabled={kidspage === 1} onClick={() => setkidpage(kidspage - 1)}><KeyboardArrowLeftIcon /></button>
 
                 </div>
                 {
                     kidsmovies.map((item) => (
                         <div className='action_inside_item' >
-                            <img src={item.poster_path}></img>
+                            <img alt='lk' src={item.poster_path}></img>
 
                             <div className='hidden-part'>
                                 <h3>{item.title}</h3>
@@ -252,7 +251,7 @@ export default function Homepage2() {
                     ))
                 }
 
-                <button disabled={popularpage1 == 2} onClick={() => setkidpage(kidspage + 1)}><ChevronRightIcon /></button>
+                <button disabled={popularpage1 === 2} onClick={() => setkidpage(kidspage + 1)}><ChevronRightIcon /></button>
             </div>
 
 
