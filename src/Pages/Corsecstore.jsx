@@ -43,7 +43,7 @@ export const Corsecstore = (type) => {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  },);
 
   return (
     <>
