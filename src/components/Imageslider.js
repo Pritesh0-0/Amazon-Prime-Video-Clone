@@ -21,23 +21,23 @@ export default function Imageslider() {
   }
   useEffect(()=>{
     fetchData();
-  },[page])
+  })
   // console.log(slider)
   return (
     <div>
 
       <div className='slider_main'>
-        <button className='button1' disabled = {page==1} onClick={()=>setpage(page-1)}><KeyboardArrowLeftIcon /></button>
+        <button className='button1' disabled = {page === 1} onClick={()=>setpage(page-1)}><KeyboardArrowLeftIcon /></button>
         {
           slider.map((data)=>(
            
             
-            <img src = {data.image}></img>
+            <img alt='gjh' src = {data.image}></img>
           
             
             ))
           }
-          <button className='button2' disabled = {page==6}onClick={()=>setpage(page + 1)} ><ChevronRightIcon /></button>
+          <button className='button2' disabled = {page === 6}onClick={()=>setpage(page + 1)} ><ChevronRightIcon /></button>
 
 
       </div>
