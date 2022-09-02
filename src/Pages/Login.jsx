@@ -3,11 +3,11 @@ import "./Login.modules.css";
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useDispatch,useSelector } from 'react-redux';
 import { loginToDoError, loginToDoLoading, loginToDoSuccess } from '../Store/actions';
-import { Navigate, NavLink } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 
 function Login() {
@@ -45,6 +45,7 @@ function Login() {
     <div classname="login">
       <img
         id="logoss"
+        alt="fff"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRZUaYFUa_lu0hSWHouZfgID6xxHCcyDFZrWONAE-P9eFIEi1gOnv4Bmc9PROxgAO148g&usqp=CAU"
       />
       <div
@@ -77,11 +78,10 @@ function Login() {
           </Button>
         {/* </Link> */}
         <span id="condition">
-          By continuing, you agree to the Amazon{" "}
-          <a href="" target="_blank">
-            {" "}
+          By continuing, you agree to the Amazon
+         
             Conditions of Use and Privacy Notice.
-          </a>
+          
         </span>
         <div style={{ display: "flex", overflow: "auto" }}>
           <Checkbox {...label} /> <span id="keep">Keep me signed in.</span>
