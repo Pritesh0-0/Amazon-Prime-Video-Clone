@@ -1,6 +1,10 @@
 # Disclaimer
 “It’s a project for educational purpose only and not commercial purpose”
 
+# Sample Screenshot
+
+<img src= "https://ibb.co/vmk1xJD">
+
 # amazon prime clone
 
 amazon prime is video streaming plaform where you can see movies,webseris on subscription basis.monthly and yearly basis.
