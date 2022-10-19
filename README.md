@@ -3,7 +3,7 @@
 
 # Sample Screenshot
 
-<img src= "https://ibb.co/vmk1xJD">
+<a href="https://ibb.co/vmk1xJD"><img src="https://i.ibb.co/vmk1xJD/amazon.png" alt="amazon" border="0"></a>
 
 # amazon prime clone
 
